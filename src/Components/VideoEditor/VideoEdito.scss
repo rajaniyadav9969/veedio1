@@ -1,0 +1,251 @@
+.videoEditorSection {
+    height: 100%;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    width: 100%;
+
+    .videoEditTabs {
+        border-right: 1px solid rgb(223, 224, 229);
+        border-top: 0px;
+        flex-shrink: 0;
+        height: 100%;
+        width: 80px;
+        padding-top: 11px;
+        display: flex;
+        flex-direction: column;
+
+        >div {
+            margin: 0 auto;
+        }
+
+        .settingIcon,
+        .icon1,
+        .helpCenter {
+            color: #c2c4c8;
+            font-size: 1.8rem;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: #000;
+
+            a {
+                color: #000;
+            }
+        }
+
+        .tabsSection {
+            flex-grow: 1;
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .icon1 {
+                font-size: 1.4rem;
+            }
+
+            .settingIcon,
+            .iconcontent,
+            .icon1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.4rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 0 auto;
+            }
+
+            .fileicon {
+                rotate: 90deg;
+            }
+
+            .iconcontent {
+                svg {
+                    color: #fff;
+                    background: #c2c4c8;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: 1rem;
+                    margin: 0 auto;
+                    border-radius: 0.4rem;
+                    padding: 4px;
+                }
+            }
+
+
+
+            .searchBtn {
+                font-weight: 400;
+                color: rgb(92, 94, 101);
+                user-select: none;
+                background: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 1rem;
+
+                .iconcontent {
+                    margin-bottom: 10px;
+
+                }
+
+            }
+
+            .searchBtn,
+            .tabsItem {
+                .title {
+                    font-size: 0.71875rem;
+                    line-height: 0.75rem;
+                    letter-spacing: 0.01em;
+                    font-weight: 500;
+                }
+
+            }
+
+            .tabsItem {
+                margin-top: 1.5rem;
+                text-align: center;
+                line-height: normal;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(92, 94, 101);
+
+                    .settingIcon,
+                    .iconcontent,
+                    .icon1 {
+                        &:hover {
+                            background: #eff0f2;
+                            border-radius: 50%;
+                        }
+
+                    }
+                }
+
+                .active {
+
+                    .settingIcon,
+                    .iconcontent,
+                    .icon1 {
+                        background: rgb(0, 152, 253);
+                        border-radius: 50%;
+
+                    }
+
+                    .iconcontent {
+                        svg {
+                            background: #69b7ff;
+                        }
+                    }
+
+                    .settingIcon,
+                    .icon1 {
+                        svg {
+
+                            fill: #69b7ff;
+                            color: #fff !important;
+                        }
+                    }
+
+                    .title {
+                        color: rgb(0, 152, 253);
+                    }
+                }
+
+            }
+        }
+
+        .helpCenterTab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: sticky;
+            padding: 16px 0px;
+            background-color: rgb(255, 255, 255);
+            transition: box-shadow 0.2s ease 0s;
+            box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 30px;
+            margin: unset;
+        }
+
+    }
+
+    .videoEditor {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 1;
+        overflow: hidden;
+        position: relative;
+        // background-color: rgb(247, 247, 248);
+
+    }
+
+    .settingFootereditor {
+        background: rgb(255, 255, 255);
+        max-height: calc(-300px + 100vh);
+        height: 156px;
+        // padding: 1.2rem 1rem;
+
+        .settingBottomHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3.5rem;
+            margin-bottom: 0.3125rem;
+            padding-top: 8px;
+
+            .volume-section,
+            .volumeContent,
+            .videoEdit {
+                display: flex;
+                align-items: center;
+            }
+
+            .videoEdit {
+
+                padding-left: 1.4rem;
+                line-height: 0;
+
+                p {
+                    margin-bottom: 0;
+                    padding-right: 1.5rem;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    svg {
+                        font-size: 0.97rem;
+                    }
+                }
+            }
+
+            .volume-section {
+                padding-right: 1.4rem;
+
+                .volumeContent {
+
+                    border-right: 2px solid rgb(225, 225, 227);
+                    border-left: 2px solid rgb(225, 225, 227);
+                    padding: 0 5px 0 10px;
+                    margin: 0 13px;
+
+                    svg {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .volumBtn,
+                .settingcontent {
+                    font-size: 1.2rem;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,278 @@
+.scrollingdiv {
+    padding: 0px 24px;
+    // margin: 0px -24px 1px;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    transition: box-shadow 0.2s ease 0s;
+    box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 30px;
+    outline: rgb(255, 255, 255) solid 1px;
+}
+
+.projectSettingSection {
+    display: flex;
+    flex: 1 1 0%;
+    min-height: 300px;
+    border-bottom: 1px solid rgb(223, 224, 229);
+
+    .projectSetting {
+        border-right: 1px solid rgb(223, 224, 229);
+        width: 394px;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        overflow-y: scroll;
+
+        .settingTitle {
+            h2 {
+                padding: 24px 0;
+                font-size: 1.125rem;
+                font-weight: 600;
+
+            }
+        }
+
+
+        .antdSelect {
+            height: 47px;
+
+        }
+
+        .settingStyleSetion {
+            padding: 24px;
+
+            >div {
+                padding-bottom: 1rem;
+            }
+
+            .styleSize {
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding-bottom: 8px;
+                display: block;
+            }
+
+            .filterContent,
+            .audiocontent {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .filterContainer {
+                border: 1px solid #d9d9d9;
+                border-radius: 0.6rem;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+                font-size: 0.8125rem;
+
+                .filterContent {
+                    padding: 1rem;
+
+                    &:first-child {
+                        border-bottom: 1px solid rgb(223, 224, 229);
+                    }
+
+                    .form-check {
+                        margin-bottom: 0;
+                        min-height: 0;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        line-height: 2;
+
+                        span {
+                            margin-left: 0.7rem;
+
+                            svg {
+                                fill: #fff;
+                            }
+                        }
+                    }
+
+                    .content {
+                        color: rgb(144, 148, 165);
+                    }
+
+                    .toggled {
+                        color: rgb(223, 224, 229);
+                    }
+
+                    .colorStyle {
+                        span {
+                            background-color: transparent !important;
+                            border: 1px solid rgb(223, 224, 229);
+
+                            svg {
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .audio-container {
+                .audiocontent {
+                    border: 1px solid #d9d9d9;
+                    border-radius: 0.6rem;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+                    cursor: pointer;
+                    padding: 0px 1rem;
+                    min-height: 4.25rem;
+                    max-height: 4.25rem;
+
+                    &:first-child {
+                        margin-bottom: 1rem;
+                    }
+
+                    .icon,
+                    p {
+                        background-color: rgb(239, 249, 255);
+                        color: rgb(0, 152, 253);
+                        border-radius: 5px;
+                    }
+
+                    .icon {
+                        padding: 8px;
+                        display: flex;
+                        font-size: 1rem;
+                    }
+
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 1rem;
+
+                        span {
+                            &:first-child {
+                                font-weight: 500;
+                                font-size: 0.81rem;
+                                line-height: 1rem;
+                            }
+
+                            &:nth-child(2) {
+                                font-size: 0.71875rem;
+                                line-height: 1.4;
+                                color: rgb(144, 148, 165);
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 0.71875rem;
+                        line-height: 0.75rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        margin: 0px;
+                        padding: 4px 6px;
+
+                    }
+
+                    .flashIcon {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+                        background-color: rgb(255, 163, 26);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .colorpicker {
+                position: absolute;
+                top: 1%;
+                left: 2rem;
+                z-index: 99;
+            }
+        }
+    }
+
+    .projectSelectionSection {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(247, 247, 248);
+        z-index: 1;
+        position: relative;
+        width: 73%;
+
+        .projectHeader,
+        .headerInfoContent {
+            align-items: center;
+            display: flex;
+        }
+
+        .projectHeader {
+            justify-content: space-between;
+            padding: 8px 8px 8px 16px;
+
+            .headerInfoContent {
+                justify-content: flex-end;
+                gap: 0.5rem;
+                z-index: 1;
+
+                .undo-renduBtn-section {
+                    span {
+                        font-size: 1.4rem;
+
+                        &:first-child {
+                            padding-right: 0.8rem;
+                        }
+                    }
+                }
+
+                .borderArror {
+                    height: 2rem;
+                    margin: 0px 1.33rem;
+                    border-right: 1px solid rgb(223, 224, 229);
+                }
+
+                .btnSection {
+                    width: 6rem;
+
+                    button {
+                        width: 100%;
+                        border: none;
+                        border-radius: 10px;
+                        height: 48px;
+                        padding: 0px 14px;
+                        display: flex;
+                        min-width: 87px;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 0.8125rem;
+                        line-height: 1rem;
+                        font-weight: 500;
+
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .done {
+                        background-color: rgb(25, 32, 51);
+                        color: rgb(255, 255, 255);
+                    }
+
+                    .invite {
+                        background-color: #e2e4e7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.socialicon,
+.youtube {
+    padding-left: 3px;
+}
+
+.youtube {
+    svg {
+        fill: red;
+    }
+}

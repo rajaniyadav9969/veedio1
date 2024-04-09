@@ -1,0 +1,198 @@
+@import 'react-pro-sidebar/dist/scss/styles.scss';
+
+.dashboardSection {
+  height: 100%;
+  display: flex;
+  position: relative;
+
+  .btn-toggle {
+    cursor: pointer;
+    display: none;
+  }
+
+  .mainSection {
+    padding: 12px 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+
+  @media (max-width: $breakpoint-md) {
+    .btn-toggle {
+      display: flex;
+    }
+  }
+
+  .dashboardContentSection {
+    margin: 3rem 0.6rem 0;
+
+    .allvideos,
+    .recentvideo {
+      font-size: 0.9375rem;
+      line-height: 2rem;
+      letter-spacing: 0px;
+      font-weight: 500;
+      margin-bottom: 0;
+
+    }
+
+    .allvideos {
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    .createsome {
+      font-size: 24px;
+    }
+
+    .singleItems {
+      display: grid;
+      // grid-template-columns: 1fr;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(16rem, auto));
+
+      .item {
+        background: rgb(255, 255, 255);
+        border: 1px solid rgb(238, 238, 240);
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 1px;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        transform: translateY(0px);
+        transition: transform 500ms ease 0s, box-shadow 500ms ease 0s;
+        // appearance: none;
+
+        &:hover {
+          transform: translateY(-0.125rem);
+        }
+
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          color: #000;
+          font-weight: 500;
+
+          span {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.625rem;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        .createProject {
+          span {
+            color: #9d45ff;
+            background: rgba(157, 69, 255, 0.1);
+          }
+
+          &:hover {
+            color: #9d45ff;
+          }
+        }
+
+        .recordVideo {
+          span {
+            color: #ff646a;
+            background: rgba(255, 106, 112, 0.1);
+          }
+
+          &:hover {
+            color: #ff646a;
+          }
+        }
+
+        .goLive {
+          span {
+            color: #0098fd;
+            background: rgb(239, 249, 255);
+          }
+
+          &:hover {
+            color: #0098fd;
+          }
+        }
+
+        .recordPodcast {
+          span {
+
+            color: #fda132;
+            background: #fff1de;
+          }
+
+          &:hover {
+            color: #fda132;
+
+          }
+
+        }
+
+      }
+
+      .videoItemSection {
+        border: none;
+        border-radius: 0.5rem;
+        position: relative;
+
+        p {
+          margin-bottom: 0;
+        }
+
+        .videoItem {
+          img {
+
+            width: 100%;
+            border: none;
+            border-radius: 0.3rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-top: 0.7rem;
+            line-height: 0.5;
+          }
+
+          span {
+            color: rgb(165, 167, 173);
+            font-size: 0.7rem;
+          }
+        }
+
+        .draftFilter,
+        .videoTimer {
+          position: absolute;
+          right: 8px;
+          color: #fff;
+          border-radius: 5px;
+          font-size: 0.8125rem;
+          line-height: 1rem;
+          font-weight: 600;
+          padding: 2px 6px;
+          cursor: pointer;
+        }
+
+        .draftFilter {
+          top: 7px;
+          background-color: rgb(255, 116, 52);
+        }
+
+        .videoTimer {
+          bottom: 3.3rem;
+          background-color: #707171;
+        }
+
+
+      }
+    }
+  }
+}
